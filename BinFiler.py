@@ -6,7 +6,6 @@ Created on 2015/03/31
 
 
 
-
 from struct import pack, unpack
 
 
@@ -18,7 +17,7 @@ class BinFiler:
         self.__handle = None
         self.__mode = mode
         self.__list_mode = {'r', 'w', 'a', 'b', '+'}
-
+        self.__data_len = {'u_char':1}
     
     
     def __enter__(self):
@@ -50,6 +49,13 @@ class BinFiler:
         return False
     
     
+    def __chdir(self, new_dir):
+        if self.handle is not None:
+            self.close_file()
+            self.__dir = new_dir
+            self.open_file()
+    
+    
     def open_file(self):
         if self.__dir is not None and self.__mode is not None:
             if self.__verify_mode() is True:
@@ -76,10 +82,27 @@ class BinFiler:
             self.__handle.write(pack(fmt, data))
     
     
-    def __chdir(self, new_dir):
-        if self.handle is not None:
-            self.close_file()
-            self.__dir = new_dir
-            self.open_file()
     
-  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
