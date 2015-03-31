@@ -80,29 +80,3 @@ class BinFiler:
             length = str(len(data))
             fmt = '<'+length+'s'
             self.__handle.write(pack(fmt, data))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
