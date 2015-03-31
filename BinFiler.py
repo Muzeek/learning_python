@@ -1,12 +1,16 @@
 '''
 Created on 2015/03/31
 
-@author: unm-dev
+@author: 2tacss
 '''
 
-# -*- coding: utf-8 -*-
+
+
 
 from struct import pack, unpack
+
+
+
 
 class BinFiler:    
     def __init__(self, file_dir, mode):
@@ -14,7 +18,7 @@ class BinFiler:
         self.__handle = None
         self.__mode = mode
         self.__list_mode = {'r', 'w', 'a', 'b', '+'}
-        self.__data_len = {'u_char':1}
+
     
     
     def __enter__(self):
@@ -78,27 +82,4 @@ class BinFiler:
             self.__dir = new_dir
             self.open_file()
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
