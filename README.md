@@ -1,2 +1,2 @@
-# learning_python
-test code
+learning_python
+This repository has only test codes.
