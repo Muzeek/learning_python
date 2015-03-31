@@ -17,7 +17,6 @@ class BinFiler:
         self.__handle = None
         self.__mode = mode
         self.__list_mode = {'r', 'w', 'a', 'b', '+'}
-        self.__data_len = {'u_char':1}
     
     
     def __enter__(self):
